@@ -3,7 +3,7 @@
 - 安装tomcat需要先有java环境，先配置好上一步环境
 - 首先去下载tomcat安装包https://link.csdn.net/?target=https%3A%2F%2Ftomcat.apache.org%2Fdownload-80.cgi
 
-![image-20220928152446619](.\images\image-20220928152446619.png)
+![](.\images\image-20220928152446619.png)
 
 - 下载成功后将压缩包传到linux服务器上，一般放在/usr/local下面。在local下创建tomcat文件夹，将压缩包放进去后解压
 
