@@ -28,7 +28,7 @@ tzdata-java-2016c-1.el6.noarch
  wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
 ```
 
-![image-20220928151813112](C:\Users\yilon\Desktop\All\knowledge\linux安装环境（64位）\images\image-20220928151813112.png)
+![](.\images\image-20220928151813112.png)
 
 - 查看是否存在安装包
 
@@ -48,7 +48,7 @@ chmod +x jdk-8u131-linux-x64.rpm
 rpm -ivh jdk-8u131-linux-x64.rpm
 ```
 
-![image-20220928152002285](C:\Users\yilon\Desktop\All\knowledge\linux安装环境（64位）\images\image-20220928152002285.png)
+![image-20220928152002285](.\images\image-20220928152002285.png)
 
 - 查看是否安装成功，安装位置在/usr/java目录下
 
@@ -56,7 +56,7 @@ rpm -ivh jdk-8u131-linux-x64.rpm
 java -version
 ```
 
-![image-20220928152112530](C:\Users\yilon\Desktop\All\knowledge\linux安装环境（64位）\images\image-20220928152112530.png)
+![image-20220928152112530](.\images\image-20220928152112530.png)
 
 - 配置JDK环境变量
 
@@ -74,7 +74,7 @@ export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
 export PATH=$PATH:${JAVA_PATH}
 ```
 
-![image-20220928152215973](C:\Users\yilon\Desktop\All\knowledge\linux安装环境（64位）\images\image-20220928152215973.png)
+![image-20220928152215973](.\images\image-20220928152215973.png)
 
 - 编辑完成后保存退出，使profile文件更改立即生效
 
@@ -88,4 +88,4 @@ source /etc/profile
 javac
 ```
 
-![image-20220928152314655](C:\Users\yilon\Desktop\All\knowledge\linux安装环境（64位）\images\image-20220928152314655.png)
+![image-20220928152314655](.\images\image-20220928152314655.png)
