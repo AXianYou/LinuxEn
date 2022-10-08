@@ -11,7 +11,7 @@
 sudo tar -zxvf apache-tomcat-8.5.56.tar.gz
 ```
 
-![image-20220928154527728](images\image-20220928154527728.png)
+![](images\image-20220928154527728.png)
 
 -  解压后进入解压的目录下，bin目录下,启动tomcat
 
@@ -19,11 +19,11 @@ sudo tar -zxvf apache-tomcat-8.5.56.tar.gz
 ./startup.sh
 ```
 
-![image-20220928154616129](images\image-20220928154616129.png)
+![](images\image-20220928154616129.png)
 
 - 记得开放防火墙8080端口，然后根据ip:8080去访问 ,马赛克部分是你的服务器IP地址
 
-![image-20220928154637159](images\image-20220928154637159.png)
+![](images\image-20220928154637159.png)
 
 ## 开放端口
 
@@ -65,5 +65,6 @@ firewall-cmd --reload
 firewall-cmd --list-ports
 ```
 
-![image-20220928154902579](images\image-20220928154902579.png)
+![](images\image-20220928154902579.png)
 
+![image-20221008170551728](images/image-20221008170551728.png)
