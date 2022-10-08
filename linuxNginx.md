@@ -1,5 +1,5 @@
 # 一、安装nginx
-   
+
 - 在 /usr/local/ 中创建新的文件夹 nginx
 
 ```c
@@ -13,7 +13,7 @@ mkdir nginx;
 yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
 ```
 
-![](.\images\image-20221008153507406.png)
+![](images/image-20221008153507406.png)
 
 - 下载并解压安装包
 
@@ -24,7 +24,7 @@ wget http://nginx.org/download/nginx-1.13.7.tar.gz
 tar -xvf nginx-1.13.7.tar.gz
 ```
 
-![](.\images\image-20221008153956232.png)
+![](images/image-20221008153956232.png)
 
 ```c
 //进入nginx目录
@@ -54,7 +54,7 @@ vi /usr/local/nginx/conf/nginx.conf
 
 - 将端口号改成8089(随便挑个端口)，因为可能apeache占用80端口，apeache端口尽量不要修改，我们选择修改[nginx](https://so.csdn.net/so/search?q=nginx&spm=1001.2101.3001.7020)端口。
 
-![](.\images\image-20221008154449752.png)
+![](images/image-20221008154449752.png)
 
 - 重启nginx
 
@@ -68,7 +68,7 @@ vi /usr/local/nginx/conf/nginx.conf
 ps -ef | grep nginx
 ```
 
-![](.\images\image-20221008154627423.png)
+![](images/image-20221008154627423.png)
 
 - 若想使用外部主机访问nginx，需要关闭服务器防火墙或开放nginx服务端口，端口为上一步nginx.conf的配置端口：
 
@@ -76,7 +76,7 @@ ps -ef | grep nginx
 firewall-cmd --zone=public --add-port=7788/tcp --permanent
 ```
 
-![image-20221008155038335](.\images\image-20221008155038335.png)
+![image-20221008155038335](images/image-20221008155038335.png)
 
 - 重启防火墙：
 
@@ -86,7 +86,7 @@ firewall-cmd --reload
 
 - 访问测试
 
-![image-20221008155223548](.\images\image-20221008155223548.png)
+![image-20221008155223548](images/image-20221008155223548.png)
 
 - 安装完成一般常用命令
 

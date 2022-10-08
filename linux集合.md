@@ -28,7 +28,7 @@ tzdata-java-2016c-1.el6.noarch
  wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
 ```
 
-![image-20220928151813112](.\images\image-20220928151813112.png)
+![image-20220928151813112](images/image-20220928151813112.png)
 
 - 查看是否存在安装包
 
@@ -48,7 +48,7 @@ chmod +x jdk-8u131-linux-x64.rpm
 rpm -ivh jdk-8u131-linux-x64.rpm
 ```
 
-![image-20220928152002285](.\images\image-20220928152002285.png)
+![image-20220928152002285](images/image-20220928152002285.png)
 
 - 查看是否安装成功，安装位置在/usr/java目录下
 
@@ -56,7 +56,7 @@ rpm -ivh jdk-8u131-linux-x64.rpm
 java -version
 ```
 
-![image-20220928152112530](.\images\image-20220928152112530.png)
+![image-20220928152112530](images/image-20220928152112530.png)
 
 - 配置JDK环境变量
 
@@ -74,7 +74,7 @@ export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
 export PATH=$PATH:${JAVA_PATH}
 ```
 
-![image-20220928152215973](.\images\image-20220928152215973.png)
+![image-20220928152215973](images/image-20220928152215973.png)
 
 - 编辑完成后保存退出，使profile文件更改立即生效
 
@@ -88,14 +88,14 @@ source /etc/profile
 javac
 ```
 
-![image-20220928152314655](.\images\image-20220928152314655.png)
+![image-20220928152314655](images/image-20220928152314655.png)
 
 # 二、安装tomcat
 
 - 安装tomcat需要先有java环境，先配置好上一步环境
 - 首先去下载tomcat安装包https://link.csdn.net/?target=https%3A%2F%2Ftomcat.apache.org%2Fdownload-80.cgi
 
-![image-20220928152446619](.\images\image-20220928152446619.png)
+![image-20220928152446619](images/image-20220928152446619.png)
 
 - 下载成功后将压缩包传到linux服务器上，一般放在/usr/local下面。在local下创建tomcat文件夹，将压缩包放进去后解压
 
@@ -103,7 +103,7 @@ javac
 sudo tar -zxvf apache-tomcat-8.5.56.tar.gz
 ```
 
-![image-20220928154527728](.\images\image-20220928154527728.png)
+![image-20220928154527728](images/image-20220928154527728.png)
 
 -  解压后进入解压的目录下，bin目录下,启动tomcat
 
@@ -111,11 +111,11 @@ sudo tar -zxvf apache-tomcat-8.5.56.tar.gz
 ./startup.sh
 ```
 
-![image-20220928154616129](.\images\image-20220928154616129.png)
+![image-20220928154616129](images/image-20220928154616129.png)
 
 - 记得开放防火墙8080端口，然后根据ip:8080去访问 ,马赛克部分是你的服务器IP地址
 
-![image-20220928154637159](.\images\image-20220928154637159.png)
+![image-20220928154637159](images/image-20220928154637159.png)
 
 ## 开放端口
 
@@ -157,7 +157,7 @@ firewall-cmd --reload
 firewall-cmd --list-ports
 ```
 
-![image-20220928154902579](.\images\image-20220928154902579.png)
+![image-20220928154902579](images/image-20220928154902579.png)
 
 # 三、安装MySQL（64位）
 
@@ -165,12 +165,12 @@ firewall-cmd --list-ports
 
 ​	地址 https://downloads.mysql.com/archives/community/
 
-![image-20220928155503475](.\images\image-20220928155503475.png)
+![image-20220928155503475](images/image-20220928155503475.png)
 
 - 进入usr/local/ 目录创建mysql文件夹
 - 将mysql安装包上传至linux中
 
-![image-20220928155945333](.\images\image-20220928155945333.png)
+![image-20220928155945333](images/image-20220928155945333.png)
 
 - 使用命令 ，解压缩mysql的tar包
 
@@ -178,7 +178,7 @@ firewall-cmd --list-ports
 tar -zxvf mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz 
 ```
 
-![image-20220928160126071](.\images\image-20220928160126071.png)
+![image-20220928160126071](images/image-20220928160126071.png)
 
 - 对解压的文件夹命名（最好修改，方便后续操作）
 
@@ -186,11 +186,11 @@ tar -zxvf mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz
 mv  mysql-5.7.32-linux-glibc2.12-x86_64/ mysql
 ```
 
-![image-20220928160411992](.\images\image-20220928160411992.png)
+![image-20220928160411992](images/image-20220928160411992.png)
 
 - 将mysql文件夹放到 /usr/local 目录下 （已经在的话请忽略）
 
-![image-20220928160528800](.\images\image-20220928160528800.png)
+![image-20220928160528800](images/image-20220928160528800.png)
 
 - 添加用户组
 
@@ -213,7 +213,7 @@ cd mysql
 mkdir data
 ```
 
-![image-20220928160741602](.\images\image-20220928160741602.png)
+![image-20220928160741602](images/image-20220928160741602.png)
 
 - mysql_install_db 被废弃了，取而代之的是 mysqld –-initialize (需要注意的是,有时候使用这个指令出错的话,将–initialize放在命令的最后面,即： ./bin/mysqld --user=xxx --basedir=xx --initizlize
 
@@ -223,7 +223,7 @@ mkdir data
 sudo ./bin/mysqld --user=mysql --basedir=/usr/local/mysql/ --datadir=/usr/local/mysql/data/ --initialize
 ```
 
-![image-20220928161102595](.\images\image-20220928161102595.png)
+![image-20220928161102595](images/image-20220928161102595.png)
 
 - 修改目录下所有文件的所有者
   将mysql/目录下除了data/目录的所有文件，改回root用户所有
@@ -234,7 +234,7 @@ chown -R root .
 chown -R mysql data/
 ```
 
-![image-20220928161326984](.\images\image-20220928161326984.png)
+![image-20220928161326984](images/image-20220928161326984.png)
 
 - 复制启动文件
 
@@ -262,7 +262,7 @@ service mysqld start
 ll /etc/my.cnf
 ```
 
-![image-20220928163800437](.\images\image-20220928163800437.png)
+![image-20220928163800437](images/image-20220928163800437.png)
 
 - 将此文件重命名或删除，再重新启动mysql
 
@@ -282,7 +282,7 @@ ll /etc/my.cnf
 service mysqld start
 ```
 
-![image-20220928163909681](.\images\image-20220928163909681.png)
+![image-20220928163909681](images/image-20220928163909681.png)
 
 参考链接  https://blog.csdn.net/baiyi6340/article/details/102342434
 
@@ -305,7 +305,7 @@ ln -s /usr/local/mysql/bin/mysql /usr/bin
 
 - 再次尝试登录
 
-![image-20220928165628772](.\images\image-20220928165628772.png)
+![image-20220928165628772](images/image-20220928165628772.png)
 
 - 修改初始密码
 
