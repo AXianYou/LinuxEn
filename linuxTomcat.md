@@ -66,3 +66,5 @@ firewall-cmd --list-ports
 ```
 
 ![image-20220928154902579](.\images\image-20220928154902579.png)
+
+![image-20221008170237313](images/image-20221008170237313.png)
