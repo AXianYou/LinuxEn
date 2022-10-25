@@ -41,7 +41,7 @@
 
 ![image-20221025111313898](images/image-20221025111313898.png)
 
-四、 在bin 目录下点击 shutdown.bat 启动测试
+四、 在bin 目录下点击 startup.bat 启动测试
 
 ![image-20221025111412036](images/image-20221025111412036.png)
 
