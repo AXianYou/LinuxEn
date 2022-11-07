@@ -30,6 +30,20 @@ tzdata-java-2016c-1.el6.noarch
 
 ![](images/image-20220928151813112.png)
 
+- 若不存在wget命令时，使用yum 安装
+
+```c
+yum install wget
+```
+
+- 若不存在wget命令时，使用yum 安装
+
+```c
+yum install wget
+```
+
+![image-20221107160705555](images/image-20221107160705555.png)
+
 - 查看是否存在安装包
 
 ```c
